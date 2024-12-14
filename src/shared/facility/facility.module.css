@@ -1,0 +1,18 @@
+.container {
+    display: inline-flex;
+    padding: 1.1em 0;
+    width: 20em;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+    font-family: "Poppins";
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0.3px 0.3px 0.3px 0.3px #D5DBE470;
+}
+
+.facilityText {
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #ABB6C7;
+}

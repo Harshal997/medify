@@ -1,0 +1,22 @@
+.headingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-family: "Poppins";
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #1B3C74;
+}
+
+.container {
+    display: flex;
+    padding: 0 10em;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 2em 0;
+    align-items: center;
+    justify-content: center;
+}
