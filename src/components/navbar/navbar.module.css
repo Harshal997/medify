@@ -20,3 +20,11 @@
     color: white;
     font-family: "Poppins";
 }
+
+p, button {
+    cursor: pointer;
+}
+
+.selected {
+    color: #2AA7FF;
+}

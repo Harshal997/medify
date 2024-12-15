@@ -1,5 +1,24 @@
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 22em;
+}
+
+.heroContainer {
+    display: flex;
+    position: relative; /* Enable positioning for child elements */
+    align-items: center;
+    justify-content: center;
+}
+
+.searchContainer {
+    position: absolute;
+    bottom: -18em;
+    z-index: 10;
+    background-color: white; 
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,0 +1,8 @@
+.container {
+    width: 40em;
+    height: 20em;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #1028511c;
+    flex-wrap: wrap;
+  }

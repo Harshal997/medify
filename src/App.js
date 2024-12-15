@@ -1,14 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/footer/Footer';
-import { Header } from './components/header/Header';
-import { Section } from './components/specialization-section/Section';
+import Home from './components/home/Home';
+import Find from './components/find-doctors/Find';
 
 function App() {
   return (
     <div>
-      <Header />
-      <Section />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/find" element={<Find />} />
+      </Routes>
     </div>
   );
 }
