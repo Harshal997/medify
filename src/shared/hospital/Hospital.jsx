@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styles from "./hospital.module.css";
 import hospital_real from "../../assets/hospital-real.png";
 import { FaThumbsUp } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const timings = [
   { mer: "morning", slots: ["11:30 AM"] },
@@ -10,6 +14,13 @@ const timings = [
     slots: ["12:00 PM", "12:30 PM", "01:30 PM", "02:00 PM", "02:30 PM"],
   },
   { mer: "evening", slots: ["06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM"] },
+];
+
+const slots = [
+  { date: "Today", available: 11 },
+  { date: "Tomorrow", available: 17 },
+  { date: "Thur, 19 Dec", available: 11 },
+  // Add more slots as needed
 ];
 
 const Hospital = ({ data, booking }) => {
@@ -36,7 +47,11 @@ const Hospital = ({ data, booking }) => {
   };
   console.log("hos", data);
   return (
-    <div key={data["Provider ID"]} className={styles.container} style={{height: expand ? "35em" : "18em"}}>
+    <div
+      key={data["Provider ID"]}
+      className={styles.container}
+      style={{ height: expand ? "35em" : "18em" }}
+    >
       <div className={styles.detailContainer}>
         <div className={styles.imgContainer}>
           <img src={hospital_real} alt="hospital-image" />
@@ -66,10 +81,19 @@ const Hospital = ({ data, booking }) => {
             </span>
           </div>
         </div>
-        {booking && <div style={{display: 'flex', alignItems: 'center', columnGap: "12px"}}>
-          <div className={styles.timeslot}>{data.timeslot}</div>
-          <div className={styles.timeslot} style={{color: '#007100', border: "1px solid #00A500"}}>{data.date}</div>
-        </div>}
+        {booking && (
+          <div
+            style={{ display: "flex", alignItems: "center", columnGap: "12px" }}
+          >
+            <div className={styles.timeslot}>{data.timeslot}</div>
+            <div
+              className={styles.timeslot}
+              style={{ color: "#007100", border: "1px solid #00A500" }}
+            >
+              {data.date}
+            </div>
+          </div>
+        )}
       </div>
       {!booking && (
         <div className={styles.bookBtn}>
@@ -80,7 +104,7 @@ const Hospital = ({ data, booking }) => {
       )}
       {expand && (
         <>
-          <div className={styles.slotsDateContainer}>
+          {/* <div className={styles.slotsDateContainer}>
             <span className={styles.slotDetails}>
               <span>Today</span>
               <span className={styles.availableSlotText}>
@@ -99,7 +123,28 @@ const Hospital = ({ data, booking }) => {
                 11 Slots Available
               </span>
             </span>
-          </div>
+          </div> */}
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1.5}
+            navigation
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {slots.map((slot, index) => (
+              <SwiperSlide key={index}>
+                <div className={styles.slotDetails}>
+                  <span>{slot.date}</span>
+                  <span className={styles.availableSlotText}>
+                    {slot.available} Slots Available
+                  </span>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
           <div className={styles.timingsContainer}>
             {timings.map((timing) => (
               <div className={styles.slotsContainer}>
