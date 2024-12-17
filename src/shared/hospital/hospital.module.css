@@ -1,8 +1,138 @@
 .container {
-    width: 40em;
-    height: 20em;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px #1028511c;
-    flex-wrap: wrap;
-  }
+  width: 40em;
+  height: 35em;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #1028511c;
+  flex-wrap: wrap;
+  font-family: "Poppins";
+  padding: 1.5em 1.5em;
+}
+
+.imgContainer {
+  background-color: #8ccfff;
+  padding: 2em;
+  border-radius: 100px;
+}
+
+.detailContainer {
+  display: flex;
+  column-gap: 2em;
+  align-items: flex-start;
+}
+
+.name {
+  color: #14bef0;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.city {
+  font-weight: 700;
+  color: #414146;
+  margin: 0;
+}
+
+.address {
+  color: #414146;
+  margin-top: 0;
+}
+
+.rating {
+  display: inline-flex;
+  padding: 0 1em;
+  background-color: #00a500;
+  align-items: center;
+  border-radius: 3.5px;
+}
+
+.rating span {
+  color: white;
+}
+
+.bookBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+}
+
+.bookBtn button {
+  background-color: #14bef0;
+  color: white;
+  font-family: "Poppins";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  border: none;
+  padding: 0.7em 2.5em;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+.bookBtn button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.slotDetails {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeslot {
+  color: #2aa7ff;
+  font-size: 13px;
+  border: 1px solid #2aa7ff;
+  padding: 0.3em 0.6em;
+  width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.timeslotSelect {
+  color: white;
+  font-size: 13px;
+  background-color:#2aa7ff;
+  border: 1px solid #2aa7ff;
+  padding: 0.3em 0.6em;
+  width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slotsDateContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.slotsContainer {
+  display: flex;
+  column-gap: 2em;
+  padding: 0 2em;
+  align-items: center;
+}
+
+.timingsContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4em;
+  justify-content: center;
+}
+
+.availableSlotText {
+  color: #01a400;
+  font-size: 11px;
+}
+
+.slotContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  justify-content: space-around;
+}

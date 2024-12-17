@@ -1,5 +1,4 @@
 import React from 'react';
-import doctor_icon from "../../assets/doctor-icon.png"
 import styles from './facility.module.css'
 
 export const Facility = ({img, text, search}) => {

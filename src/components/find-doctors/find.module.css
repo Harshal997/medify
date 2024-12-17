@@ -25,6 +25,17 @@
     width: 20em;
     font-family: "Poppins";
   }
+
+  .select {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 2em;
+    width: 20em;
+    font-family: "Poppins";
+    appearance: none;
+    cursor: pointer;
+  }
   
   .searchButton {
     border: none;
@@ -33,4 +44,24 @@
     border-radius: 8px;
     color: white;
     font-family: "Poppins";
+  }
+
+  .hospitalDetails {
+    font-family: "Poppins";
+    margin-bottom: 2em;
+  }
+
+  .hospitalDetails h6 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .hospitalDetails p {
+    color: #787887;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
   }

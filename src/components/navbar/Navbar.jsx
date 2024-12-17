@@ -33,7 +33,7 @@ export const Navbar = () => {
               {text}
             </p>
           ))}
-        <button className={styles.myBookings}>My Bookings</button>
+        <button onClick={() => navigate('/bookings')} className={styles.myBookings}>My Bookings</button>
       </div>
     </div>
   );

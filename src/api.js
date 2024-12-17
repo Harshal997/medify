@@ -4,7 +4,7 @@ const baseUrl = "https://meddata-backend.onrender.com";
 
 export const getAllStates = async () => {
   try {
-    const response = await axios.get(baseUrl);
+const response = await axios.get(`${baseUrl}/states`);
     console.log(response.data);
     return response.data;
   } catch (e) {
@@ -12,7 +12,7 @@ export const getAllStates = async () => {
   }
 };
 
-export const getCentersOfCitiesByState = async (state) => {
+export const getCitiesByState = async (state) => {
   try {
     const response = await axios.get(`${baseUrl}/cities/${state}`);
     console.log(response.data);
