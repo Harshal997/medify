@@ -43,7 +43,7 @@ const Find = () => {
     <div>
       <div className={styles.navBackground}>
         <div className={styles.navContainer}>
-          <Navbar />
+          <Navbar find={true} />
         </div>
       </div>
       <div className={styles.inputs}>
@@ -77,10 +77,10 @@ const Find = () => {
           Search
         </button>
       </div>
-      <div className={styles.hospitalDetails}>
+      {hospitals && hospitals.length && <div className={styles.hospitalDetails}>
         <h6>{hospitals.length} medical centers available in {city}</h6>
         <p>Book appointments with minimum wait-time & verified doctor details</p>
-      </div>
+      </div>}
       <div
         style={{
           display: "flex",

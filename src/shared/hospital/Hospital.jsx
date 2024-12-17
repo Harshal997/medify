@@ -66,10 +66,10 @@ const Hospital = ({ data, booking }) => {
             </span>
           </div>
         </div>
-        <div style={{display: 'flex', alignItems: 'center', columnGap: "12px"}}>
+        {booking && <div style={{display: 'flex', alignItems: 'center', columnGap: "12px"}}>
           <div className={styles.timeslot}>{data.timeslot}</div>
           <div className={styles.timeslot} style={{color: '#007100', border: "1px solid #00A500"}}>{data.date}</div>
-        </div>
+        </div>}
       </div>
       {!booking && (
         <div className={styles.bookBtn}>

@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import styles from "./navbar.module.css";
 import { useNavigate } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({find}) => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState("");
 
@@ -27,7 +27,7 @@ export const Navbar = () => {
               key={text}
               onClick={() => setSelected(text)}
               style={{
-                color: selected === text ? "#2AA7FF" : "black"
+                color: find ? text === "Find Doctors" ? "#2AA7FF" : "black" : selected === text ? "#2AA7FF" : "black"
               }}
             >
               {text}
